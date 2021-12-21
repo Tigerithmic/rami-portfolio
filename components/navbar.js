@@ -9,6 +9,7 @@ import {
   Heading,
   Flex,
   Menu,
+  Text,
   MenuItem,
   MenuList,
   MenuButton,
@@ -71,21 +72,20 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItems href="/projects" path={path}>
-            projects
-          </LinkItems>
           <LinkItems href="/about" path={path}>
             bio
           </LinkItems>
           <LinkItems href="/projects" path={path}>
+            projects
+          </LinkItems>
+          <LinkItems href="/learning" path={path}>
             learning
           </LinkItems>
         </Stack>
 
-        <Box flex={1} align="right">
-          <ToggleThemeButton/>
+        <Box>
+          <ToggleThemeButton />
         </Box>
-
       </Container>
     </Box>
   );

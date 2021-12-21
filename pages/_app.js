@@ -2,8 +2,19 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Layout from '../components/layouts/dashboard.js';
 import theme from '../lib/theme-config.js';
 import Fonts from '../components/fonts';
+import useSound from 'use-sound';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { isServer } from '../lib/isServer';
 
 const App = ({ Component, pageProps, router }) => {
+  const [playSwitchSound] = useSound('switch.mp3');
+
+  useEffect(() => {
+    if (isServer()) return null;
+    playSwitchSound();
+  }, [router.pathname]);
+
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
