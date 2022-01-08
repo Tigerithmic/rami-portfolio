@@ -22,22 +22,28 @@ const Page = () => {
   return (
     <Container>
       <Box
-        borderRadius="lg"
-        bg={useColorModeValue('#CBB8E3', '#DD9353')}
+        borderRadius="15"
+        bg={useColorModeValue('#BEAAD6', '#DD9353')}
         p={2}
         marginBottom={5}
         mt={50}
         mb={20}
+        fontSize={17}
         align="center"
-        color="black"
+        color="white"
       >
         hey! i'm a full-stack engineer, currently on an internship with{' '}
         <b>rbc.</b>
       </Box>
-
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 0 }}>
+          <Box
+            flexShrink={0}
+            borderRadius={15}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 0 }}
+            width="100%"
+          >
             <Image
               maxWidth="110px"
               display="inline-block"
